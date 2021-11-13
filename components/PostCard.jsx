@@ -21,9 +21,11 @@ const PostCard = ({post}) => {
                         height="30px"
                         width="30px"
                         className="align-middle rounded-full"
-                        src={post.author.photo.url}
+                        // issue with URL being null
+                        src={post.author.photo}
                     />
                     <p>{post.author.name}</p>
+                    <p className="inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
                 </div>
             </div>
         </div>
